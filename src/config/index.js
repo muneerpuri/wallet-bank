@@ -50,11 +50,6 @@ export const LINKEDIN_CLIENT_ID = process.env.LINKEDIN_CLIENT_ID;
  */
 export const LINKEDIN_CLIENT_SECRET = process.env.LINKEDIN_CLIENT_SECRET;
 
-/**
- * Secret key used for session management.
- * @constant {string}
- */
-export const SESSION_SECRET = process.env.SESSION_SECRET;
 
 /**
  * The environment in which the application is running (e.g., development, production).

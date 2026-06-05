@@ -4,27 +4,13 @@
  */
 
 import express from 'express';
-import session from 'express-session';
 import routes from './routes/index.js';
-import { NODE_ENV, SESSION_SECRET } from './config/index.js';
 import { initializeMiddleware } from './middlewares/appInitializingMiddlewares.js';
 import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from './config/swaggerConfig.js';
 
 const app = express();
 
-/**
- * Configures and initializes the session middleware.
- * @see {@link https://www.npmjs.com/package/express-session|express-session}
- */
-app.use(
-  session({
-    secret: SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    cookie: { secure: NODE_ENV === 'production' },
-  }),
-);
 
 
 /**
