@@ -5,7 +5,7 @@
 
 import express from 'express';
 import { validateBody } from '../../middlewares/validator.js';
-import authenticate from '../../middlewares/authenticate.js';
+import authenticate from '../../middlewares/tokenAuthCheck.js';
 import { depositSchema, transferSchema } from '../../utils/schemas.js';
 
 import { getWallet } from '../../controllers/wallet/getWallet.js';
